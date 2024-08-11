@@ -61,13 +61,13 @@ public with sharing class FlowControlLoopsCollections {
      * Finds the maximum of two numbers.
      * If both numbers are equal, it returns that number.
      * Example: findMax(58, 200) should return 200
-     * @param num1 The first number.
+     * @param num1 The first number
      * @param num2 The second number.
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
         // Initialize largestNum as null
-        Integer largestNum = null;
+        Integer largestNum = null; 
 
         if(num1 == null || num2 == null){
             largestNum = null;
