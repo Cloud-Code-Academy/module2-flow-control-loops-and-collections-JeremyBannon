@@ -340,12 +340,20 @@ public with sharing class FlowControlLoopsCollections {
      * @return The position of the word in the list as a string or -1 if the word was not found.
      */
     public static Integer findWordInList(String wordToFind, List<String> words) {
+        
         // The variable to store the index of the word
 
         // Loop through the list of words
+        for(Integer i = 0; i < words.size(); i++){
+            if(words.get(i) == wordToFind){
+                return i;
+            }
+
+
+        }
             // If the current word is the word to find, exit the loop
 
-        return null; // Replace null with the variable you used to store the result
+        return -1; // Replace null with the variable you used to store the result
     }
 
     /**
@@ -358,10 +366,20 @@ public with sharing class FlowControlLoopsCollections {
     public static Decimal countMoney() {
         // The list of money in the wallet, represented in dollars and cents
         List<Decimal> moneyInWallet = new List<Decimal>{0.50, 10, 3.84, 24.60, 9.08, 50, 4.90}; //DO NOT CHANGE
+        
+        Decimal theSum = 0;
 
-        return null; // Replace null with the variable you used to store the result
+        for(Integer i = 0; i < moneyInWallet.size(); i++){
+            theSum += moneyInWallet[i];
+
+            if(theSum >= 40){
+                break;
+            }
+        }
+        return theSum;
+
+        
     }
-
     /**
      * Question 18
      * Create a map that has five key-value pairs to the map, where the keys are the names of fruits and the values are their quantities.
